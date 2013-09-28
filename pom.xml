@@ -449,23 +449,9 @@
 
     <modules>
         <module>core</module>
-        <module>picocontainer</module>
-        <module>clojure</module>
         <module>junit</module>
-        <module>jruby</module>
-        <module>jython</module>
-        <module>spring</module>
-        <module>guice</module>
-        <module>weld</module>
-        <module>groovy</module>
-        <module>ioke</module>
-        <module>rhino</module>
         <module>java</module>
-        <module>openejb</module>
-        <module>scala</module>
-        <module>scala/scala_previous</module>
-        <module>needle</module>
-        <module>testng</module>
+        <module>android</module>
     </modules>
 
     <profiles>
@@ -760,6 +746,18 @@
                 <artifactId>wagon-ssh</artifactId>
                 <version>2.4</version>
             </extension>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>4.8.0.RELEASE</version>
+           </extension>
         </extensions>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>S3 Snapshot Repository</name>
+            <url>s3://mvn-ecabo/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
