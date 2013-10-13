@@ -14,7 +14,7 @@ public class RuntimeOptionsFactory {
     private final Class clazz;
     private final Class<? extends Annotation>[] annotationClasses;
 
-    public RuntimeOptionsFactory(Class clazz, Class<? extends Annotation>[] annotationClasses) {
+    public RuntimeOptionsFactory(Class clazz, Class<? extends Annotation>... annotationClasses) {
         this.clazz = clazz;
         this.annotationClasses = annotationClasses;
     }
